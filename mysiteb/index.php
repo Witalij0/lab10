@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+  
   <div id="header">
     <!-- Верхняя часть страницы -->
     <img src="logo.gif" width="187" height="29" alt="Наш логотип" class="logo" />
@@ -21,8 +21,16 @@
     <h1>Добро пожаловать на наш сайт!</h1>
     <!-- Заголовок -->
     <!-- Область основного контента -->
+     
       <blockquote>
-        <?php echo date('Сегодня d-m-Y'); ?>
+      <?php
+          // Установка локали и выбор значений даты
+          setlocale(LC_ALL, "russian");
+          $day = date('d');
+          $mon = date('m');
+          $year = date('Y');
+          echo 'Сегодня ', $day, ' число, ', $mon, ' месяц, ', $year, ' год.';
+        ?>
       </blockquote>
     <h3>Зачем мы ходим в школу?</h3>
     <p>
